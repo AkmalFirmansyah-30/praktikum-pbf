@@ -6,6 +6,7 @@ use App\Http\Controllers\MhsController;
 use App\Http\Controllers\MahasiswaController;
 use App\Http\Controllers\BlogController;
 use App\Http\Controllers\PendaftaranController;
+use App\Http\Controllers\BookingController;
 
 
 Route::get('/', function () {
@@ -41,3 +42,7 @@ Route::get('formulir/hasil', [BelajarController::class, 'hasil']);
 
 Route::get('/pendaftaran', [PendaftaranController::class, 'index']);
 Route::get('/pendaftaran/hasil', [PendaftaranController::class, 'hasil']);
+
+// === ROUTE UNTUK FORM INPUT (Bab 12) ===
+Route::get('/booking', [BookingController::class, 'booking']);
+Route::post('/hasil', [BookingController::class, 'hasil']);

@@ -66,9 +66,22 @@
                 </tr>
 
                 <tr>
-                    <td>Biaya Sumbangan Pendidikan</td>
+                    <td>Jalur Pendaftaran</td>
                     <td>:</td>
-                    <td><input type="text" name="bsp" required></td>
+                    <td>
+                        <select id="jalur" name="jalur" required>
+                            <option value="">-- Pilih Jalur --</option>
+                            <option value="SNBP">SNBP</option>
+                            <option value="SNBT">SNBT</option>
+                            <option value="Mandiri">Mandiri</option>
+                        </select>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td>Uang Pangkal / Sumbangan Pengembangan Institusi</td>
+                    <td>:</td>
+                    <td><input id="bsp" type="text" name="bsp" placeholder="Hanya Mandiri yang dapat mengisi" disabled></td>
                 </tr>
 
                 <tr>
@@ -111,5 +124,24 @@
                 </tr>
             </table>
         </form>
+
+        <script>
+            const jalurSelect = document.getElementById('jalur');
+            const bspInput = document.getElementById('bsp');
+
+            function updateBspField() {
+                if (jalurSelect.value === 'Mandiri') {
+                    bspInput.disabled = false;
+                    bspInput.placeholder = 'Isi jumlah uang pangkal untuk Mandiri';
+                } else {
+                    bspInput.disabled = true;
+                    bspInput.value = '';
+                    bspInput.placeholder = 'Hanya Mandiri yang dapat mengisi';
+                }
+            }
+
+            jalurSelect.addEventListener('change', updateBspField);
+            updateBspField();
+        </script>
     </body>
 </html>

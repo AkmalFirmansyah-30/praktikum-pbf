@@ -25,6 +25,11 @@
                 <td><input type="text" name="jurusan" required="required"></td>
             </tr>
             <tr>
+                <td>Prodi</td>
+                <td>:</td>
+                <td><input type="text" name="prodi" required="required"></td>
+            </tr>
+            <tr>
                 <td>Alamat</td>
                 <td>:</td>
                 <td><textarea name="alamat" required="required"></textarea></td>

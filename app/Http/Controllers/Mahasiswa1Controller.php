@@ -21,6 +21,7 @@ class Mahasiswa1Controller extends Controller
             'nim' => $request->nim,
             'nama' => $request->nama,
             'jurusan' => $request->jurusan,
+            'prodi' => $request->prodi,
             'alamat' => $request->alamat
         ]);
         return redirect('/mahasiswa');
@@ -36,6 +37,7 @@ class Mahasiswa1Controller extends Controller
             'nim' => $request->nim,
             'nama' => $request->nama,
             'jurusan' => $request->jurusan,
+            'prodi' => $request->prodi,
             'alamat' => $request->alamat
         ]);
         return redirect('/mahasiswa');

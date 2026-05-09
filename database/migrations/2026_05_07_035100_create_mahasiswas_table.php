@@ -13,6 +13,7 @@ return new class extends Migration
             $table->string('nim');
             $table->string('nama');
             $table->string('jurusan');
+            $table->string('prodi');
             $table->text('alamat');
         });
     }

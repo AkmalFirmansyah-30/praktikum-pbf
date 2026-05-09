@@ -13,7 +13,7 @@
 <body align="center">
     <table align="center" width="40%">
         <tr>
-            <td align="center"><h2>Laporan Data Mahasiswa Teknik Informatika</h2></td>
+            <td align="center"><h2>Laporan Data Mahasiswa PNC</h2></td>
         </tr>
         <tr>
             <td>Politeknik Negeri Cilacap | Jl Dr. Soetomo Cilacap Selatan | Telp : (0282) 537992 <hr></td>
@@ -25,13 +25,15 @@
             <th>NIM</th>
             <th>Nama</th>
             <th>Jurusan</th>
+            <th>Prodi</th>
             <th>Alamat</th>
         </tr>
         @foreach ($mahasiswa as $mhs)
         <tr>
-            <td align="left">{{ $mhs->nim }}</td>
+            <td align="center">{{ $mhs->nim }}</td>
             <td align="left">{{ $mhs->nama }}</td>
-            <td align="left">{{ $mhs->jurusan }}</td>
+            <td align="center">{{ $mhs->jurusan }}</td>
+            <td align="center">{{ $mhs->prodi }}</td>
             <td align="left">{{ $mhs->alamat }}</td>
         </tr>
         @endforeach

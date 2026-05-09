@@ -27,6 +27,11 @@
                 <td><input type="text" name="jurusan" required="required" value="{{ $mhs->jurusan }}"></td>
             </tr>
             <tr>
+                <td>Prodi</td>
+                <td>:</td>
+                <td><input type="text" name="prodi" required="required" value="{{ $mhs->prodi }}"></td>
+            </tr>
+            <tr>
                 <td>Alamat</td>
                 <td>:</td>
                 <td><textarea name="alamat" required="required">{{ $mhs->alamat }}</textarea></td>
